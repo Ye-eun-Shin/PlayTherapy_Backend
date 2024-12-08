@@ -1,0 +1,30 @@
+applicationName: analyze-api
+
+phase: ALPHA
+
+open_ai:
+  token: .
+  model: gpt-4o
+  batch: 10
+  threshold: 0.5
+  temperature: 0.5
+
+aws:
+  region: ap-northeast-2
+  bucket: playtherapy-contents
+  access_key: .
+  secret_key: .
+
+mysql:
+  db_url: .
+  pool_recycle: 3600
+
+security:
+  secret_key: .
+  algorithm: HS256
+  expires_delta: 60
+
+langflow:
+  host: .
+  token: .
+  flow_id: .

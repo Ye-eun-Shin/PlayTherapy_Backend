@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "analyze"
+version = "0.0.1"
+description = ""
+authors = ["lhj5772 <lhj5772@linecorp.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+dependency-injector = {extras= ["yaml"], version = "^4.41.0"}
+fastapi = "^0.108.0"
+pydantic = {extras = ["email"], version = "^2.6.1"}
+requests = "^2.31.0"
+starlette = "^0.32.0"
+urllib3 = "^2.0.2"
+uvicorn = "^0.25.0"
+cryptography ="38.0.4"
+PyJWT = "2.8.0"
+passlib = "1.7.4"
+apscheduler = "^3.10.4"
+pydub = "^0.25.1"
+schedule = "^1.2.1"
+mysql-connector-python = "^8.3.0"
+pytest = "^8.0.2"
+mysqlclient = "^2.2.4"
+pandas = "^2.1.4"
+langchain = "^0.1.0"
+langchain-openai = "^0.1.0"
+openai = "^1.6.1"
+numpy = "^1.26.3"
+matplotlib = "^3.8.2"
+seaborn = "^0.13.1"
+
+# local dependency
+core = { path = "../../package/core-package", develop = true }
+object = { path = "../../package/object-package", develop = true }
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.12.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
